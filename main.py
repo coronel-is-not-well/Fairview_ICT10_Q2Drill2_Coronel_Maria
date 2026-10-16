@@ -1,22 +1,25 @@
 from pyscript import document, display
 
-def Submit(e)
+def Submit(e):
 
-    Grade7 = {"Raven", "Sabine"}
+    Grade7 = {"Raven Denum", "Sabine Agacita"}
 
-    Grade8 = {"Frances", "Kirsten"}
+    Grade8 = {"Frances Sevilla", "Kirsten Caagbay"}
 
-    Grade9 = {"Rodolfo", "Lance"}
+    Grade9 = {"Rodolfo Lao", "Lance Catu"}
 
-    Grade10 = {"Maria"}
+    Grade10 = {"Maria Coronel"} # listing members
 
-    GradesAll = Grade7 | Grade8 | Grade9 | Grade10
+    GradesAll = Grade7 | Grade8 | Grade9 | Grade10 # putting them together
 
-    NewName = document.getElementById("firstname").value + " " + document.getElementById("lastname").value
+    NewName = document.getElementById("firstname").value.capitalize() + " " + document.getElementById("lastname").value.capitalize() # getting the input value
 
-    GradesAll.add('')
+    Final = GradesAll | {NewName} # all together
 
-    display(NewName, target="output1")
+    
+    display(Final, target="output1")
+
+    display(len(Final), target="output2")
 
 
 
